@@ -4,7 +4,7 @@ public interface GameMinProjection {
 	//aqui tem que colocar os gets correspondentes a consulta SQL
 	Long getId();
 	String getTitle();
-	Integer getYear();
+	Integer getGameYear();
 	String getImgUrl();
 	String getShortDescription();
 	Integer getPosition();
