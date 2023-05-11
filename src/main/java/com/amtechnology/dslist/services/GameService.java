@@ -16,6 +16,7 @@ public class GameService {
 	
 	@Autowired //injeção de dependência
 	private GameRepository gameRepository;
+
 	
 	@Transactional(readOnly = true) //faz com que o metodo fique transacional para obdecer o ACID
 	public GameDTO findById(Long id) {

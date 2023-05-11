@@ -19,14 +19,14 @@ public class GameController {
 	@Autowired
 	private GameService gameService;
 	
-	@GetMapping //mapeando o metodo com o verbo http que no caso é para obter
-	public List<GameMinDTO> findAll(){
-		List<GameMinDTO> result = gameService.findAll();
-		return result;
-	}
 	@GetMapping(value = "/{id}") //mapeando o metodo com o verbo http que no caso é para obter
 	public GameDTO findById(@PathVariable Long id){
 		GameDTO result = gameService.findById(id);
+		return result;
+	}
+	@GetMapping //mapeando o metodo com o verbo http que no caso é para obter
+	public List<GameMinDTO> findAll(){
+		List<GameMinDTO> result = gameService.findAll();
 		return result;
 	}
 }
